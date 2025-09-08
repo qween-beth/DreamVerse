@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# DreamVerse 🚀
 
-# Run and deploy your AI Studio app
+DreamVerse is an innovative web application that redefines **product visualization**, allowing users to instantly see **any item in their personal space**. Leveraging the powerful **multi-modal capabilities** of [Google's Gemini API](https://ai.google.dev/gemini-api), DreamVerse offers two intuitive workflows:
 
-This contains everything you need to run your app locally.
+1. **Upload & Drag-Drop**: Upload a product photo and a scene, then drag-and-drop to generate a **photorealistic composite**.
+2. **Text-to-Image**: Describe a product and scene in plain text, and let AI generate both from scratch.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Y0H8l7723Vq3GFGatNOmlxZZsM6IYuTY
+## How It Works 🛠️
 
-## Run Locally
+At its core, DreamVerse uses a **sophisticated chain of Gemini models** to deliver stunning visuals:
 
-**Prerequisites:**  Node.js
+- **`gemini-2.5-flash`**: Analyzes the user's placement to create a **detailed semantic description** of the scene and product positioning.
+- **`gemini-2.5-flash-image-preview`**: Uses the description to perform the **final composition**, intelligently adjusting for **lighting, shadows, and perspective**.
+- **`imagen-4.0-generate-001`**: Powers the **text-to-image feature**, generating photorealistic product and scene images from text prompts.
 
+The result? A seamless blend of **imagination and reality**, perfect for visualizing products in real-world contexts.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Tech Stack 🖥️
+
+Built with modern technologies for a **responsive and intuitive** user experience:
+
+- **Frontend**: [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) for robust, typed development
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for rapid, utility-first design
+- **Backend**: [Google Gemini API](https://ai.google.dev/gemini-api) for multi-modal AI capabilities
+- **Image Generation**: [Imagen 4.0](https://deepmind
