@@ -269,7 +269,7 @@ export const generateCompositeImage = async (
     dropPosition: { xPercent: number; yPercent: number; }
 ): Promise<{ finalImageUrl: string; debugImageUrl: string; finalPrompt: string; }> => {
   console.log('Starting multi-step image generation process...');
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
   // Get original scene dimensions for final cropping and correct marker placement
   const { width: originalWidth, height: originalHeight } = await getImageDimensions(environmentImage);
@@ -409,7 +409,7 @@ export const generateImagesFromPrompt = async (
     userPrompt: string
 ): Promise<{ productFile: File, sceneFile: File }> => {
     console.log('Starting image generation from prompt...');
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+    const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
     // Step 1: Use a text model to parse the user prompt into two separate, optimized image generation prompts.
     console.log('Parsing user prompt...');

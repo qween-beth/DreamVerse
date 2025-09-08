@@ -492,7 +492,7 @@ const App: React.FC = () => {
         position={touchGhostPosition}
       />
       <div className="flex flex-col items-center gap-8 w-full">
-        <Header />
+        
         <main className="w-full flex-grow flex flex-col items-center justify-center">
           {currentView === 'landing' ? (
             <LandingPage onStart={() => setCurrentView('app')} />
